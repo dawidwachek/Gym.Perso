@@ -13,6 +13,6 @@
 
 
 	
-  	"rewrites": [{ "source": "/trainingstudio/(.*)", "destination": "/api" }]
+  	"rewrites": [{ "source": "/trainingstudio/(.*)", "destination": "/index" }]
 
 }
