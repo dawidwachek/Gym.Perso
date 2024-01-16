@@ -12,7 +12,4 @@
 	]
 
 
-	
-  	"rewrites": [{ "source": "/trainingstudio/(.*)", "destination": "/index" }]
-
 }
