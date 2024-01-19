@@ -3,12 +3,22 @@
 		"src":"trainingstudio/wsgi.py",
 		"use":"@vercel/python@3.0.7",
 		"config":{"maxLambdaSize": "15mb", "runtime":"python3.9"}
-	}],
-	"routes":[
-        {
-            "src":"/static/(.*)",
-            "dest":"/static/$1"
+	},
+    {
+        "src": "build_files.sh",
+        "use": "@vercel/static-build",
+        "config": {
+            "distDir": "staticfiles_build"
         }
+    }
+    
+    
+    ],
+	"routes":[
+    {
+        "src":"/static/(.*)",
+        "dest":"/static/$1"
+    }.
 		{
 			"src":"/(.*)",
 			"dest":"trainingstudio/wsgi.py"
